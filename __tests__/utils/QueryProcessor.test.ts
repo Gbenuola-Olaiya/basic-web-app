@@ -43,4 +43,8 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 5 multiplied by 7?")).toEqual("35");
         expect(QueryProcessor("What is 12 multiplied by 1?")).toEqual("12");
     });
+
+    test('should output max', () => {
+        expect(QueryProcessor("Which of the following numbers is the largest: 11, 18, 51?")).toEqual("51");
+    });
 });

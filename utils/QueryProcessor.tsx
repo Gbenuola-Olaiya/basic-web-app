@@ -33,6 +33,15 @@ export default function QueryProcessor(query: string): string {
     return (x*y).toString();
   }
 
+  // Which of the following numbers is the largest: 11, 18, 51?
+  const largestComp = query.match(/Which of the following numbers is the largest: (\d+), (\d+), (\d+)?/);
+  if (largestComp) {
+    const x: number = parseInt(largestComp[1]);
+    const y: number = parseInt(largestComp[2]);
+    const z: number = parseInt(largestComp[3]);
+    const num_list = [x,y,z]
+    return Math.max(...num_list).toString();
+  }
 
   return "";
 }
