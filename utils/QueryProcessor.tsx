@@ -19,6 +19,15 @@ export default function QueryProcessor(query: string): string {
     )
   }
 
+  //What is 68 plus 64 plus 72?
+  const doubleAddMatch = query.match(/What is (\d+) plus (\d+) plus (\d+)/);
+    if (doubleAddMatch) {
+      const x: number = parseInt(doubleAddMatch[1]);
+      const y: number = parseInt(doubleAddMatch[2]);
+      const z: number = parseInt(doubleAddMatch[3]);
+      return (x+y+z).toString();
+    }
+
   const addMatch = query.match(/What is (\d+) plus (\d+)/);
     if (addMatch) {
       const x: number = parseInt(addMatch[1]);

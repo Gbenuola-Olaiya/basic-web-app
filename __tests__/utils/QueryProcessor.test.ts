@@ -39,6 +39,11 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 12 plus 1?")).toEqual("13");
     });
 
+    test('should double add numbers', () => {
+        console.log(QueryProcessor("What is 5 plus 52 plus 1?"))
+        expect(QueryProcessor("What is 5 plus 52 plus 1?")).toEqual("58");
+    });
+
     test('should subtract numbers', () => {
         expect(QueryProcessor("What is 5 minus 52?")).toEqual("-47");
         expect(QueryProcessor("What is 12 minus 1?")).toEqual("11");
