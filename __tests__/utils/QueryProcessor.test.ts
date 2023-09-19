@@ -33,4 +33,12 @@ describe("QueryProcessor", () => {
             "Gbenu"
         ));
     });
+
+    test('should return 103', () => {
+        const query = "14 plus 89"
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "103"
+        ));
+    });
 });
